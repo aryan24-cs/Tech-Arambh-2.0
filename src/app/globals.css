@@ -1,26 +1,207 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-tech-blue: #0044ff;
+  /* Kept name tech-blue to avoid mass find-replace in classes, but value is Blue */
+  --color-tech-gold: #00B4D8;
+  --color-tech-yellow: #0077B6;
+  --color-tech-dark: #00020A;
+  --color-tech-gray: #050b1a;
+  --color-tech-border: #151e32;
+  --color-tech-text: #FAFAFA;
+  --color-tech-muted: #A1A1AA;
+
+  --font-heading: var(--font-cinzel), serif;
+  --font-tech: var(--font-rajdhani), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ---- Base ---- */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-tech-dark);
+  color: var(--color-tech-text);
+  font-family: var(--font-tech);
+  overflow-x: hidden;
+  background-image:
+    linear-gradient(rgba(24, 24, 27, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 24, 27, 0.4) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+}
+
+/* Helper Clip Paths */
+.clip-path-cyber {
+  clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+}
+
+.clip-path-cyber-left {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+}
+
+/* ---- Custom Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-tech-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-tech-border);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-tech-blue);
+}
+
+/* ---- Tech Cyber Box with Cut Corners ---- */
+.tech-container {
+  position: relative;
+  background-color: var(--color-tech-gray);
+  border: 1px solid var(--color-tech-border);
+  clip-path: polygon(0 20px,
+      20px 0,
+      100% 0,
+      100% calc(100% - 20px),
+      calc(100% - 20px) 100%,
+      0 100%);
+  padding: 2px;
+  /* For the gradient border effect */
+}
+
+/* Tech Border Box - no fill, just borders and cut corners */
+.tech-border-box {
+  position: relative;
+  border: 1px solid var(--color-tech-border);
+  clip-path: polygon(0 15px,
+      15px 0,
+      100% 0,
+      100% calc(100% - 15px),
+      calc(100% - 15px) 100%,
+      0 100%);
+  background: rgba(24, 24, 27, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+/* Add four corner crosshairs */
+.tech-border-box::before,
+.tech-border-box::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--color-tech-blue);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.crosshair-tl {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  border-top: 1px solid var(--color-tech-blue);
+  border-left: 1px solid var(--color-tech-blue);
+  width: 10px;
+  height: 10px;
+}
+
+.crosshair-tr {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  border-top: 1px solid var(--color-tech-blue);
+  border-right: 1px solid var(--color-tech-blue);
+  width: 10px;
+  height: 10px;
+}
+
+.crosshair-bl {
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  border-bottom: 1px solid var(--color-tech-blue);
+  border-left: 1px solid var(--color-tech-blue);
+  width: 10px;
+  height: 10px;
+}
+
+.crosshair-br {
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1px solid var(--color-tech-blue);
+  border-right: 1px solid var(--color-tech-blue);
+  width: 10px;
+  height: 10px;
+}
+
+/* ---- Cyber Button ---- */
+.cyber-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-tech-blue);
+  color: var(--color-tech-dark);
+  font-family: var(--font-tech);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.cyber-btn:hover {
+  background: var(--color-tech-gold);
+  color: var(--color-tech-dark);
+}
+
+.cyber-btn-outline {
+  background: transparent;
+  color: var(--color-tech-blue);
+  border: 1px solid var(--color-tech-blue);
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+.cyber-btn-outline:hover {
+  background: rgba(0, 50, 255, 0.1);
+}
+
+/* Dotted grid decorative element */
+.dotted-grid {
+  background-image: radial-gradient(var(--color-tech-border) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+/* Accent Glow Text */
+.text-glow-blue {
+  text-shadow: 0 0 10px rgba(0, 50, 255, 0.8), 0 0 20px rgba(0, 50, 255, 0.4);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 10px rgba(0, 180, 216, 0.8), 0 0 20px rgba(0, 180, 216, 0.4);
+}
+
+/* Loading screen */
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-tech-dark);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
