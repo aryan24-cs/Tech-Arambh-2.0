@@ -89,9 +89,9 @@ export default function Footer() {
 
                         {/* Contacts */}
                         <div className="flex flex-col gap-3 items-start md:items-end w-full">
-                            <a href="mailto:info@aravali.edu.in" className="inline-flex items-center md:flex-row-reverse gap-3 text-sm text-tech-muted hover:text-tech-blue transition-colors font-bold uppercase tracking-widest group">
+                            <a href="mailto:aravalifest@acem.edu.in" className="inline-flex items-center md:flex-row-reverse gap-3 text-sm text-tech-muted hover:text-tech-blue transition-colors font-bold uppercase tracking-widest group">
                                 <Mail className="w-4 h-4 text-tech-border group-hover:text-tech-blue" />
-                                info@aravali.edu.in
+                                aravalifest@acem.edu.in
                             </a>
                             <div className="inline-flex items-center md:flex-row-reverse gap-3 text-sm text-tech-muted font-bold uppercase tracking-widest group">
                                 <Phone className="w-4 h-4 text-tech-border group-hover:text-tech-blue" />
