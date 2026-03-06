@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { Clock, Users, Trophy, Flame } from "lucide-react";
+import { Clock, Users, Trophy, GraduationCap, MapPin } from "lucide-react";
 
 export default function About() {
     return (
@@ -59,7 +59,7 @@ export default function About() {
                         </div>
 
                         {/* Stats Grid */}
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10 w-full">
+                        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 relative z-10 w-full">
 
                             {/* Stat 01 */}
                             <div className="flex flex-col relative group">
@@ -87,10 +87,10 @@ export default function About() {
                                     <Users className="w-3 h-3 text-tech-gold opacity-50" />
                                 </div>
                                 <div className="text-4xl md:text-5xl font-bold text-tech-gold font-tech mb-2">
-                                    50<span className="text-2xl text-tech-gold/50">+</span>
+                                    350<span className="text-2xl text-tech-gold/50">+</span>
                                 </div>
                                 <div className="text-xs text-tech-text uppercase tracking-widest font-tech opacity-80 border-t border-tech-border pt-4">
-                                    Teams
+                                    Participants
                                 </div>
                             </div>
 
@@ -122,13 +122,32 @@ export default function About() {
                             <div className="flex flex-col relative group">
                                 <div className="text-[10px] text-tech-muted uppercase tracking-[0.2em] mb-4 font-bold font-tech flex items-center justify-between">
                                     <span>STAT 04</span>
-                                    <Flame className="w-3 h-3 text-tech-blue opacity-50" />
+                                    <GraduationCap className="w-3 h-3 text-tech-blue opacity-50" />
                                 </div>
                                 <div className="text-4xl md:text-5xl font-bold text-tech-blue font-tech mb-2">
-                                    200<span className="text-2xl text-tech-blue/50">+</span>
+                                    100<span className="text-2xl text-tech-blue/50">+</span>
                                 </div>
                                 <div className="text-xs text-tech-text uppercase tracking-widest font-tech opacity-80 border-t border-tech-border pt-4">
-                                    Participants
+                                    Colleges
+                                </div>
+                            </div>
+
+                            {/* Divider (Desktop) */}
+                            <div className="hidden md:block absolute left-[80%] top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-[2px] bg-tech-border">
+                                <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-tech-blue text-[10px]"></span>
+                            </div>
+
+                            {/* Stat 05 */}
+                            <div className="flex flex-col relative group">
+                                <div className="text-[10px] text-tech-muted uppercase tracking-[0.2em] mb-4 font-bold font-tech flex items-center justify-between">
+                                    <span>STAT 05</span>
+                                    <MapPin className="w-3 h-3 text-tech-gold opacity-50" />
+                                </div>
+                                <div className="text-4xl md:text-5xl font-bold text-tech-gold font-tech mb-2">
+                                    15<span className="text-2xl text-tech-gold/50">+</span>
+                                </div>
+                                <div className="text-xs text-tech-text uppercase tracking-widest font-tech opacity-80 border-t border-tech-border pt-4">
+                                    States
                                 </div>
                             </div>
 
