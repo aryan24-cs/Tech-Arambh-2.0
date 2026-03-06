@@ -100,7 +100,7 @@ export default function Hero() {
                             className="flex flex-col sm:flex-row gap-6 mt-8"
                         >
                             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                                <Link href="https://forms.gle/kcPyofH7qG9agxwS9" target="_blank" rel="noopener noreferrer" className="cyber-btn text-lg px-10 py-4">
+                                <Link href="https://unstop.com/o/9Exmb5k?lb=DE5tu8dW&utm_medium=Share&utm_source=satyapan26383&utm_campaign=Online_coding_challenge" target="_blank" rel="noopener noreferrer" className="cyber-btn text-lg px-10 py-4">
                                     Register Now
                                 </Link>
                             </motion.div>

@@ -102,7 +102,7 @@ export default function Register() {
 
                             {/* Right QR Placeholder / CTA Block - matching the white square box */}
                             <div className="flex-[1] flex flex-col items-center justify-center border-2 border-white bg-white min-w-[200px] min-h-[200px] relative group overflow-hidden">
-                                <Link href="https://forms.gle/kcPyofH7qG9agxwS9" target="_blank" rel="noopener noreferrer" className="absolute inset-0 w-full h-full z-20" aria-label="Register Portal">
+                                <Link href="https://unstop.com/o/9Exmb5k?lb=DE5tu8dW&utm_medium=Share&utm_source=satyapan26383&utm_campaign=Online_coding_challenge" target="_blank" rel="noopener noreferrer" className="absolute inset-0 w-full h-full z-20" aria-label="Register Portal">
                                     <span className="sr-only">Go to Apply Portal</span>
                                 </Link>
                                 <div className="absolute inset-0 p-4 flex items-center justify-center">

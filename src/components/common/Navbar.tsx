@@ -13,7 +13,7 @@ const navLinks = [
     { href: "/#prizes", label: "Prizes" },
     { href: "/#mentors", label: "Mentors" },
     { href: "/#faq", label: "FAQ" },
-    { href: "https://forms.gle/kcPyofH7qG9agxwS9", label: "Register" },
+    { href: "https://unstop.com/o/9Exmb5k?lb=DE5tu8dW&utm_medium=Share&utm_source=satyapan26383&utm_campaign=Online_coding_challenge", label: "Register" },
 ];
 
 export default function Navbar() {
