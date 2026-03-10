@@ -92,18 +92,20 @@ export default function Hero() {
                             </div>
                         </motion.div>
 
-                        {/* CTAs */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 1, duration: 0.6 }}
-                            className="flex flex-col sm:flex-row gap-6 mt-8"
+                            className="flex flex-col sm:flex-row gap-6 mt-8 flex-wrap"
                         >
                             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                                 <Link href="https://unstop.com/o/9Exmb5k?lb=DE5tu8dW&utm_medium=Share&utm_source=satyapan26383&utm_campaign=Online_coding_challenge" target="_blank" rel="noopener noreferrer" className="cyber-btn text-lg px-10 py-4">
                                     Register Now
                                 </Link>
                             </motion.div>
+                            <Link href="/results" className="cyber-btn-outline text-lg px-10 py-4 !border-tech-gold !text-tech-gold hover:!bg-tech-gold/10 hover:shadow-[0_0_15px_rgba(255,215,0,0.5)]">
+                                View Results
+                            </Link>
                             <Link href="/#about" className="cyber-btn-outline text-lg px-10 py-4">
                                 View Details
                             </Link>
