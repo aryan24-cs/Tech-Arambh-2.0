@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ParticleBackground from "@/components/common/ParticleBackground";
-import { Trophy, Terminal, Building2, Search, Loader2 } from "lucide-react";
+import { Trophy, Terminal, Building2, Search, ArrowLeft } from "lucide-react";
+import Link from "next/link";
 
 interface ResultType {
   phase: string;
@@ -12,35 +13,29 @@ interface ResultType {
   leaderName: string;
 }
 
-export default function ResultsClient({ results }: { results: ResultType[] }) {
-  // Extract unique phases
-  const phases = Array.from(new Set(results.map(r => r.phase))).sort();
-  const [activePhase, setActivePhase] = useState(phases[0] || "");
-  
+export default function PhaseResultsClient({ results, phaseName }: { results: ResultType[], phaseName: string }) {
   // Search state
   const [searchTerm, setSearchTerm] = useState("");
   const [delayedSearchTerm, setDelayedSearchTerm] = useState("");
   const [isSearching, setIsSearching] = useState(false);
 
-  // Debouncing & Throttling (3s delay)
+  // Debouncing & Throttling (3s delay) inside the background without heavy UI
   useEffect(() => {
-    if (!searchTerm && !delayedSearchTerm) return; // Don't trigger delay if empty initially
+    if (!searchTerm && !delayedSearchTerm) return;
 
     setIsSearching(true);
     const timer = setTimeout(() => {
       setDelayedSearchTerm(searchTerm);
       setIsSearching(false);
-    }, 3000); // 3 seconds delay for rate limiting simulation
+    }, 3000); // 3 seconds delay for rate limiting
 
     return () => clearTimeout(timer);
   }, [searchTerm]);
 
   const filteredResults = results.filter(r => {
-    const matchesPhase = r.phase === activePhase;
-    const matchesSearch = r.teamName.toLowerCase().includes(delayedSearchTerm.toLowerCase()) || 
-                          r.collegeName.toLowerCase().includes(delayedSearchTerm.toLowerCase()) ||
-                          r.leaderName.toLowerCase().includes(delayedSearchTerm.toLowerCase());
-    return matchesPhase && matchesSearch;
+    return r.teamName.toLowerCase().includes(delayedSearchTerm.toLowerCase()) || 
+           r.collegeName.toLowerCase().includes(delayedSearchTerm.toLowerCase()) ||
+           r.leaderName.toLowerCase().includes(delayedSearchTerm.toLowerCase());
   });
 
   return (
@@ -48,6 +43,13 @@ export default function ResultsClient({ results }: { results: ResultType[] }) {
       <ParticleBackground />
 
       <div className="max-w-6xl mx-auto">
+        <div className="mb-8">
+            <Link href="/results" className="inline-flex items-center gap-2 text-tech-blue hover:text-tech-gold transition-colors tracking-widest text-sm uppercase font-bold group">
+                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                Back to Phases
+            </Link>
+        </div>
+
         <div className="text-center mb-12 relative">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -63,11 +65,11 @@ export default function ResultsClient({ results }: { results: ResultType[] }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-4 text-glow-blue"
+            className="text-4xl md:text-6xl font-bold uppercase tracking-tighter mb-4 text-glow-blue"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            <span className="text-white">Hackathon</span>{" "}
-            <span className="text-tech-blue">Results</span>
+            <span className="text-white">{phaseName}</span>{" "}
+            <span className="text-tech-blue">Selections</span>
           </motion.h1>
           
           <motion.div
@@ -77,12 +79,12 @@ export default function ResultsClient({ results }: { results: ResultType[] }) {
             className="flex items-center justify-center gap-4 text-tech-muted tracking-widest uppercase text-sm mt-6"
           >
             <span className="w-12 h-[1px] bg-tech-blue/50" />
-            <p className="text-glow-blue">Official Hackathon Selections</p>
+            <p className="text-glow-blue">Official Hackathon Results</p>
             <span className="w-12 h-[1px] bg-tech-blue/50" />
           </motion.div>
         </div>
 
-        {/* Action Bar: Search & Phases */}
+        {/* Action Bar: Search */}
         <div className="flex flex-col gap-8 mb-12 items-center">
             {/* Search Bar */}
             <motion.div 
@@ -102,67 +104,17 @@ export default function ResultsClient({ results }: { results: ResultType[] }) {
                         onChange={(e) => setSearchTerm(e.target.value)}
                         className="block w-full pl-12 pr-12 py-3 bg-tech-gray/60 border border-tech-blue/30 rounded-none text-white placeholder-tech-muted/70 focus:outline-none focus:border-tech-blue focus:ring-1 focus:ring-tech-blue transition-all"
                     />
-                    <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
-                        {isSearching ? (
-                            <Loader2 className="h-5 w-5 text-tech-gold animate-spin" />
-                        ) : null}
-                    </div>
                     {/* Decorative cyber corners */}
                     <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-tech-blue z-10" />
                     <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-tech-blue z-10" />
                 </div>
             </motion.div>
-
-            {/* Phase Tabs */}
-            {phases.length > 0 && (
-            <div className="flex flex-wrap justify-center gap-4">
-                {phases.map((phase, idx) => (
-                <motion.button
-                    key={phase}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 + idx * 0.1 }}
-                    onClick={() => setActivePhase(phase)}
-                    className={`px-8 py-3 text-sm font-bold tracking-widest uppercase transition-all duration-300 relative overflow-hidden group ${
-                    activePhase === phase
-                        ? "text-tech-dark bg-tech-blue"
-                        : "text-tech-blue border border-tech-blue/30 hover:bg-tech-blue/10"
-                    }`}
-                >
-                    {activePhase === phase && (
-                    <motion.div
-                        layoutId="activeTab"
-                        className="absolute inset-0 bg-tech-blue"
-                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                    />
-                    )}
-                    <span className="relative z-10">{phase}</span>
-                    
-                    {/* Decorative corners */}
-                    <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/50 z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/50 z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </motion.button>
-                ))}
-            </div>
-            )}
         </div>
 
         {/* Results Grid */}
         <AnimatePresence mode="wait">
-          {isSearching ? (
              <motion.div
-                key="loading"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="py-20 text-center text-tech-muted tracking-widest uppercase border border-tech-blue/10 bg-tech-gray/40 backdrop-blur-md flex flex-col items-center justify-center min-h-[300px]"
-             >
-                 <Loader2 className="w-16 h-16 mb-6 text-tech-blue animate-spin" />
-                 <p className="text-lg text-tech-gold animate-pulse">Processing Request...</p>
-             </motion.div>
-          ) : (
-             <motion.div
-                key={`${activePhase}-${delayedSearchTerm}`}
+                key={delayedSearchTerm}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
@@ -175,7 +127,7 @@ export default function ResultsClient({ results }: { results: ResultType[] }) {
                     key={`${result.teamName}-${idx}`}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: idx * 0.1 }}
+                    transition={{ delay: idx * 0.05 }}
                     className="bg-tech-gray/60 backdrop-blur-md border border-tech-blue/20 p-6 relative group overflow-hidden"
                     >
                     <div className="absolute top-0 right-0 w-16 h-16 bg-tech-blue/10 rounded-bl-full transition-transform group-hover:scale-150 duration-500" />
@@ -211,11 +163,10 @@ export default function ResultsClient({ results }: { results: ResultType[] }) {
                 ) : (
                     <div className="col-span-full py-20 text-center text-tech-muted tracking-widest uppercase border border-tech-blue/10 bg-tech-gray/40 backdrop-blur-md flex flex-col items-center justify-center">
                         <Search className="w-12 h-12 mx-auto mb-4 opacity-50 text-tech-blue" />
-                        <p>No results found matching your criteria.</p>
+                        <p>{isSearching ? "Processing Search..." : "No results found matching your criteria."}</p>
                     </div>
                 )}
             </motion.div>
-          )}
         </AnimatePresence>
       </div>
     </div>
