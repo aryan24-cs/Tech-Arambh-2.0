@@ -21,10 +21,6 @@ export default function WaitingListClient({ results }: { results: WaitingListTea
     setHasMounted(true);
   }, []);
 
-  if (!hasMounted) {
-    return null;
-  }
-
   useEffect(() => {
     if (!searchTerm && !delayedSearchTerm) return;
 
@@ -36,6 +32,10 @@ export default function WaitingListClient({ results }: { results: WaitingListTea
 
     return () => clearTimeout(timer);
   }, [searchTerm, delayedSearchTerm]);
+
+  if (!hasMounted) {
+    return null;
+  }
 
   const sortedResults = [...results].sort((a, b) => 
     a.teamName.toLowerCase() > b.teamName.toLowerCase() ? 1 : -1

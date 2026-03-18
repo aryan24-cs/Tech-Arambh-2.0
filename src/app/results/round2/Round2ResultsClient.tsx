@@ -10,6 +10,7 @@ interface Round2Result {
   rank: number;
   teamName: string;
   leaderName: string;
+  collegeName?: string;
 }
 
 export default function Round2ResultsClient({ results }: { results: Round2Result[] }) {
@@ -21,10 +22,6 @@ export default function Round2ResultsClient({ results }: { results: Round2Result
   useEffect(() => {
     setHasMounted(true);
   }, []);
-
-  if (!hasMounted) {
-    return null;
-  }
 
   useEffect(() => {
     if (!searchTerm && !delayedSearchTerm) return;
@@ -38,14 +35,20 @@ export default function Round2ResultsClient({ results }: { results: Round2Result
     return () => clearTimeout(timer);
   }, [searchTerm, delayedSearchTerm]);
 
+  if (!hasMounted) {
+    return null;
+  }
+
   const sortedResults = [...results].sort((a, b) => 
     a.teamName.toLowerCase() > b.teamName.toLowerCase() ? 1 : -1
   );
 
   const filteredResults = sortedResults.filter((r) => {
+    const searchLow = delayedSearchTerm.toLowerCase();
     return (
-      r.teamName.toLowerCase().includes(delayedSearchTerm.toLowerCase()) ||
-      r.leaderName.toLowerCase().includes(delayedSearchTerm.toLowerCase())
+      r.teamName.toLowerCase().includes(searchLow) ||
+      r.leaderName.toLowerCase().includes(searchLow) ||
+      r.collegeName?.toLowerCase().includes(searchLow)
     );
   });
 
@@ -187,14 +190,22 @@ export default function Round2ResultsClient({ results }: { results: Round2Result
                     {result.teamName}
                   </h3>
 
-                  {/* Leader Name */}
-                  <div className="mt-4 pt-4 border-t border-tech-blue/10 relative z-10">
+                  {/* Leader and College Name */}
+                  <div className="mt-4 pt-4 border-t border-tech-blue/10 relative z-10 flex flex-col gap-2">
                     <div className="flex items-center gap-2 text-tech-muted text-sm group-hover:text-tech-gold transition-colors">
                       <Terminal className="w-4 h-4 flex-shrink-0" />
                       <span className="truncate uppercase tracking-wider text-xs font-bold">
                         {result.leaderName}
                       </span>
                     </div>
+                    {result.collegeName && (
+                      <div className="flex items-center gap-2 text-tech-blue/60 text-sm group-hover:text-tech-blue transition-colors">
+                        <Trophy className="w-3 h-3 flex-shrink-0" />
+                        <span className="truncate uppercase tracking-wider text-[10px] font-medium leading-tight">
+                          {result.collegeName}
+                        </span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Hover border effect */}

@@ -53,10 +53,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body
         className={`${cinzel.variable} ${rajdhani.variable} antialiased`}
         style={{ fontFamily: "var(--font-rajdhani), sans-serif" }}
+        suppressHydrationWarning
       >
         <LoadingScreen />
         <Navbar />
