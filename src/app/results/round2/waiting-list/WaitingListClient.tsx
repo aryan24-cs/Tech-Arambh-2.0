@@ -21,6 +21,10 @@ export default function WaitingListClient({ results }: { results: WaitingListTea
     setHasMounted(true);
   }, []);
 
+  if (!hasMounted) {
+    return null;
+  }
+
   useEffect(() => {
     if (!searchTerm && !delayedSearchTerm) return;
 

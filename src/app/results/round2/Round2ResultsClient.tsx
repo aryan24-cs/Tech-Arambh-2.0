@@ -22,6 +22,10 @@ export default function Round2ResultsClient({ results }: { results: Round2Result
     setHasMounted(true);
   }, []);
 
+  if (!hasMounted) {
+    return null;
+  }
+
   useEffect(() => {
     if (!searchTerm && !delayedSearchTerm) return;
 
