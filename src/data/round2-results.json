@@ -1,61 +1,297 @@
 [
-  { "rank": 1, "teamName": "Royal", "leaderName": "Chirag kumar", "collegeName": "Govt. Sarvodya Vidalya NO. 3 Delhi" },
-  { "rank": 2, "teamName": "Eye Dentify", "leaderName": "Ishaan Maheshwari", "collegeName": "Vivekananda Institute of Professional Studies" },
-  { "rank": 3, "teamName": "PI-VISION", "leaderName": "Amisha Singh", "collegeName": "The Northcap University" },
-  { "rank": 4, "teamName": "Solitaire", "leaderName": "Harsh Yadav", "collegeName": "GTBIT" },
-  { "rank": 5, "teamName": "Ctrl+She", "leaderName": "Aadhya Kher", "collegeName": "YMCA" },
-  { "rank": 6, "teamName": "Null Byte", "leaderName": "Aditya", "collegeName": "GGSIPU" },
-  { "rank": 7, "teamName": "Code Crafters", "leaderName": "Vineet garg", "collegeName": "YMCA" },
-  { "rank": 8, "teamName": "Bachelor's", "leaderName": "Lakshay Bana", "collegeName": "YMCA" },
-  { "rank": 9, "teamName": "X-PIRATES", "leaderName": "Shivam", "collegeName": "NIU" },
-  { "rank": 10, "teamName": "Code4ce", "leaderName": "Ankit kumar", "collegeName": "ACEM" },
-  { "rank": 11, "teamName": "Nova Coders", "leaderName": "Krishna Dubey", "collegeName": "BIT bihar" },
-  { "rank": 12, "teamName": "Techverse", "leaderName": "Gaurav Kaushik", "collegeName": "Trinity institute of innovation" },
-  { "rank": 13, "teamName": "Innovators", "leaderName": "Jasmine", "collegeName": "JSS noida" },
-  { "rank": 14, "teamName": "Humanizers", "leaderName": "Kshitiz jain", "collegeName": "MAIT delhi" },
-  { "rank": 15, "teamName": "Bits", "leaderName": "Yashika Takkar", "collegeName": "MSIT new delhi" },
-  { "rank": 16, "teamName": "Suraksha AI", "leaderName": "Krish Agarwal", "collegeName": "K.R Mangalam" },
-  { "rank": 17, "teamName": "Bright Brains", "leaderName": "Rakhi", "collegeName": "Indra gandhi technical university" },
-  { "rank": 18, "teamName": "Drifters", "leaderName": "Aditya kumar singh", "collegeName": "Guru Tegh Bahadur" },
-  { "rank": 19, "teamName": "Health sync", "leaderName": "Priyanka Arora", "collegeName": "ACEM" },
-  { "rank": 20, "teamName": "Cosmo Tech", "leaderName": "Khushi Gaba", "collegeName": "VIPS delhi" },
-  { "rank": 21, "teamName": "Focus X", "leaderName": "Satyam Yadav", "collegeName": "ABES noida" },
-  { "rank": 22, "teamName": "God Complex", "leaderName": "Suhani Goyal", "collegeName": "MRU fbd." },
-  { "rank": 23, "teamName": "Binary Brains", "leaderName": "Mani Raj Goel", "collegeName": "Trinity institute of innovation" },
-  { "rank": 24, "teamName": "Bane", "leaderName": "Ayush Shukla", "collegeName": "Galgotias university noida" },
-  { "rank": 25, "teamName": "NULL POINTERSSS", "leaderName": "Hritik Kumar", "collegeName": "GGSIPU" },
-  { "rank": 26, "teamName": "NextGen Innovators", "leaderName": "Janesh", "collegeName": "G.L Bajaj institute" },
-  { "rank": 27, "teamName": "Hackspire", "leaderName": "Yashika Chaudhary", "collegeName": "Bhagwan Parshuram institute of technology" },
-  { "rank": 28, "teamName": "Fantastic Four", "leaderName": "Dev Malik", "collegeName": "BVC Delhi" },
-  { "rank": 29, "teamName": "Apex Deploy", "leaderName": "zenish", "collegeName": "Dr. Kiran and Pallavi Patel global university" },
-  { "rank": 30, "teamName": "TechRiders", "leaderName": "Juicy", "collegeName": "DTU" },
-  { "rank": 31, "teamName": "K2", "leaderName": "Kirti Sharma", "collegeName": "Guru Tegh Bahadur" },
-  { "rank": 32, "teamName": "Binary", "leaderName": "Vaibhav sharma", "collegeName": "DTC delhi" },
-  { "rank": 33, "teamName": "Codezen", "leaderName": "Kanak Agarwal", "collegeName": "IILM greater noida" },
-  { "rank": 34, "teamName": "Atom", "leaderName": "Himanshu Sharma", "collegeName": "Vivekananda Institute of Professional Studies" },
-  { "rank": 35, "teamName": "The Ardi Coders", "leaderName": "Aditya Singh", "collegeName": "YMCA" },
-  { "rank": 36, "teamName": "Aura Cultivator", "leaderName": "Sagar Singh Rawat", "collegeName": "Graphic era hill university , bhimtal" },
-  { "rank": 37, "teamName": "Deep Minds", "leaderName": "Vishal Kumar Sahu", "collegeName": "Galgotias university noida" },
-  { "rank": 38, "teamName": "Restock Rangers", "leaderName": "Himanshi Goyal", "collegeName": "YMCA" },
-  { "rank": 39, "teamName": "Dynasty", "leaderName": "Akash Bhatt", "collegeName": "Galgotias university noida" },
-  { "rank": 40, "teamName": "Hackverse", "leaderName": "Praveen Yadav", "collegeName": "Vivekananda Institute of Professional Studies" },
-  { "rank": 41, "teamName": "Kasukabe Defence Gro", "leaderName": "Harshit", "collegeName": "YMCA" },
-  { "rank": 42, "teamName": "Irony X", "leaderName": "Bhoomika verma", "collegeName": "YMCA" },
-  { "rank": 43, "teamName": "Ctrl+She", "leaderName": "Kalpana", "collegeName": "YMCA" },
-  { "rank": 44, "teamName": "Agri Catalysts", "leaderName": "Rashika Singh", "collegeName": "Dayal bagh educational institute" },
-  { "rank": 45, "teamName": "Hack Drifter", "leaderName": "Sheetal", "collegeName": "YMCA" },
-  { "rank": 46, "teamName": "OG Bande", "leaderName": "Gourav", "collegeName": "Shri Vishwakarma skill university" },
-  { "rank": 47, "teamName": "Logic Loop", "leaderName": "Himanshu Kumar", "collegeName": "Lovely Professional University Punjab" },
-  { "rank": 48, "teamName": "Justice Coders", "leaderName": "Chetan Pathak", "collegeName": "Dr. A.P.J. Abdul Kalam Technical University" },
-  { "rank": 49, "teamName": "Algo Minds", "leaderName": "Saurav Yadav", "collegeName": "YMCA" },
-  { "rank": 50, "teamName": "Code Warriors", "leaderName": "Khushi", "collegeName": "YMCA" },
-  { "rank": 51, "teamName": "Hare Krishna", "leaderName": "Shivam Kumar", "collegeName": "YMCA" },
-  { "rank": 52, "teamName": "Hydra Heal", "leaderName": "Manav Mahawar", "collegeName": "Bhagwan Parshuram institute of technology" },
-  { "rank": 53, "teamName": "Tech Forge", "leaderName": "Anshul Mangla", "collegeName": "ACEM" },
-  { "rank": 54, "teamName": "Astra GenX", "leaderName": "Gopal Kumar Mahto", "collegeName": "I.K. Gujral Punjab Technical University (IKGPTU) Jalandhar" },
-  { "rank": 55, "teamName": "Codex", "leaderName": "Shivam Gupta", "collegeName": "ACEM" },
-  { "rank": 56, "teamName": "InnovatHERS", "leaderName": "Radhika", "collegeName": "YMCA" },
-  { "rank": 57, "teamName": "TeamX", "leaderName": "Rishabh Gupta", "collegeName": "Abes Engineering College" },
-  { "rank": 58, "teamName": "Laal Tamatar", "leaderName": "Laal Tamatar", "collegeName": "Jaypee Institute Of Information Technology" },
-  { "rank": 59, "teamName": "Krishi Drishti", "leaderName": "Utkarsh Tripathi", "collegeName": "Dronacharya Group of Institutions (DGI) Greater Noida" }
+  {
+    "teamName": "Royal",
+    "leaderName": "Chirag kumar",
+    "collegeName": "Govt. Sarvodya Vidalya NO. 3 Delhi"
+  },
+  {
+    "teamName": "Eye Dentify",
+    "leaderName": "Ishaan Maheshwari",
+    "collegeName": "Vivekananda Institute of Professional Studies"
+  },
+  {
+    "teamName": "PI-VISION",
+    "leaderName": "Amisha Singh",
+    "collegeName": "The Northcap University"
+  },
+  {
+    "teamName": "Solitaire",
+    "leaderName": "Harsh Yadav",
+    "collegeName": "GTBIT"
+  },
+  {
+    "teamName": "Ctrl+She",
+    "leaderName": "Aadhya Kher",
+    "collegeName": "YMCA"
+  },
+  {
+    "teamName": "Null Byte",
+    "leaderName": "Aditya",
+    "collegeName": "GGSIPU"
+  },
+  {
+    "teamName": "Code Crafters",
+    "leaderName": "Vineet garg",
+    "collegeName": "YMCA"
+  },
+  {
+    "teamName": "Bachelor's",
+    "leaderName": "Lakshay Bana",
+    "collegeName": "YMCA"
+  },
+  {
+    "teamName": "X-PIRATES",
+    "leaderName": "Shivam",
+    "collegeName": "NIU"
+  },
+  {
+    "teamName": "Code4ce",
+    "leaderName": "Ankit kumar",
+    "collegeName": "ACEM"
+  },
+  {
+    "teamName": "Nova Coders",
+    "leaderName": "Krishna Dubey",
+    "collegeName": "BIT bihar"
+  },
+  {
+    "teamName": "Techverse",
+    "leaderName": "Gaurav Kaushik",
+    "collegeName": "Trinity institute of innovation"
+  },
+  {
+    "teamName": "Innovators",
+    "leaderName": "Jasmine",
+    "collegeName": "JSS noida"
+  },
+  {
+    "teamName": "Humanizers",
+    "leaderName": "Kshitiz jain",
+    "collegeName": "MAIT delhi"
+  },
+  {
+    "teamName": "Bits",
+    "leaderName": "Yashika Takkar",
+    "collegeName": "MSIT new delhi"
+  },
+  {
+    "teamName": "Suraksha AI",
+    "leaderName": "Krish Agarwal",
+    "collegeName": "K.R Mangalam"
+  },
+  {
+    "teamName": "Bright Brains",
+    "leaderName": "Rakhi",
+    "collegeName": "Indra gandhi technical university"
+  },
+  {
+    "teamName": "Drifters",
+    "leaderName": "Aditya kumar singh",
+    "collegeName": "Guru Tegh Bahadur"
+  },
+  {
+    "teamName": "Health sync",
+    "leaderName": "Priyanka Arora",
+    "collegeName": "ACEM"
+  },
+  {
+    "teamName": "Cosmo Tech",
+    "leaderName": "Khushi Gaba",
+    "collegeName": "VIPS delhi"
+  },
+  {
+    "teamName": "Focus X",
+    "leaderName": "Satyam Yadav",
+    "collegeName": "ABES noida"
+  },
+  {
+    "teamName": "God Complex",
+    "leaderName": "Suhani Goyal",
+    "collegeName": "MRU fbd."
+  },
+  {
+    "teamName": "Binary Brains",
+    "leaderName": "Mani Raj Goel",
+    "collegeName": "Trinity institute of innovation"
+  },
+  {
+    "teamName": "Bane",
+    "leaderName": "Ayush Shukla",
+    "collegeName": "Galgotias university noida"
+  },
+  {
+    "teamName": "NULL POINTERSSS",
+    "leaderName": "Hritik Kumar",
+    "collegeName": "GGSIPU"
+  },
+  {
+    "teamName": "NextGen Innovators",
+    "leaderName": "Janesh",
+    "collegeName": "G.L Bajaj institute"
+  },
+  {
+    "teamName": "Hackspire",
+    "leaderName": "Yashika Chaudhary",
+    "collegeName": "Bhagwan Parshuram institute of technology"
+  },
+  {
+    "teamName": "Fantastic Four",
+    "leaderName": "Dev Malik",
+    "collegeName": "BVC Delhi"
+  },
+  {
+    "teamName": "Apex Deploy",
+    "leaderName": "zenish",
+    "collegeName": "Dr. Kiran and Pallavi Patel global university"
+  },
+  {
+    "teamName": "TechRiders",
+    "leaderName": "Juicy",
+    "collegeName": "DTU"
+  },
+  {
+    "teamName": "K2",
+    "leaderName": "Kirti Sharma",
+    "collegeName": "Guru Tegh Bahadur"
+  },
+  {
+    "teamName": "Binary",
+    "leaderName": "Vaibhav sharma",
+    "collegeName": "DTC delhi"
+  },
+  {
+    "teamName": "Codezen",
+    "leaderName": "Kanak Agarwal",
+    "collegeName": "IILM greater noida"
+  },
+  {
+    "teamName": "Atom",
+    "leaderName": "Himanshu Sharma",
+    "collegeName": "Vivekananda Institute of Professional Studies"
+  },
+  {
+    "teamName": "The Ardi Coders",
+    "leaderName": "Aditya Singh",
+    "collegeName": "YMCA"
+  },
+  {
+    "teamName": "Aura Cultivator",
+    "leaderName": "Sagar Singh Rawat",
+    "collegeName": "Graphic era hill university , bhimtal"
+  },
+  {
+    "teamName": "Deep Minds",
+    "leaderName": "Vishal Kumar Sahu",
+    "collegeName": "Galgotias university noida"
+  },
+  {
+    "teamName": "Restock Rangers",
+    "leaderName": "Himanshi Goyal",
+    "collegeName": "YMCA"
+  },
+  {
+    "teamName": "Dynasty",
+    "leaderName": "Akash Bhatt",
+    "collegeName": "Galgotias university noida"
+  },
+  {
+    "teamName": "Hackverse",
+    "leaderName": "Praveen Yadav",
+    "collegeName": "Vivekananda Institute of Professional Studies"
+  },
+  {
+    "teamName": "Kasukabe Defence Gro",
+    "leaderName": "Harshit",
+    "collegeName": "YMCA"
+  },
+  {
+    "teamName": "Irony X",
+    "leaderName": "Bhoomika verma",
+    "collegeName": "YMCA"
+  },
+  {
+    "teamName": "Ctrl+She",
+    "leaderName": "Kalpana",
+    "collegeName": "YMCA"
+  },
+  {
+    "teamName": "Agri Catalysts",
+    "leaderName": "Rashika Singh",
+    "collegeName": "Dayal bagh educational institute"
+  },
+  {
+    "teamName": "Hack Drifter",
+    "leaderName": "Sheetal",
+    "collegeName": "YMCA"
+  },
+  {
+    "teamName": "OG Bande",
+    "leaderName": "Gourav",
+    "collegeName": "Shri Vishwakarma skill university"
+  },
+  {
+    "teamName": "Logic Loop",
+    "leaderName": "Himanshu Kumar",
+    "collegeName": "Lovely Professional University Punjab"
+  },
+  {
+    "teamName": "Justice Coders",
+    "leaderName": "Chetan Pathak",
+    "collegeName": "Dr. A.P.J. Abdul Kalam Technical University"
+  },
+  {
+    "teamName": "Algo Minds",
+    "leaderName": "Saurav Yadav",
+    "collegeName": "YMCA"
+  },
+  {
+    "teamName": "Code Warriors",
+    "leaderName": "Khushi",
+    "collegeName": "YMCA"
+  },
+  {
+    "teamName": "Hare Krishna",
+    "leaderName": "Shivam Kumar",
+    "collegeName": "YMCA"
+  },
+  {
+    "teamName": "Hydra Heal",
+    "leaderName": "Manav Mahawar",
+    "collegeName": "Bhagwan Parshuram institute of technology"
+  },
+  {
+    "teamName": "Tech Forge",
+    "leaderName": "Anshul Mangla",
+    "collegeName": "ACEM"
+  },
+  {
+    "teamName": "Astra GenX",
+    "leaderName": "Gopal Kumar Mahto",
+    "collegeName": "I.K. Gujral Punjab Technical University (IKGPTU) Jalandhar"
+  },
+  {
+    "teamName": "Codex",
+    "leaderName": "Shivam Gupta",
+    "collegeName": "ACEM"
+  },
+  {
+    "teamName": "InnovatHERS",
+    "leaderName": "Radhika",
+    "collegeName": "YMCA"
+  },
+  {
+    "teamName": "TeamX",
+    "leaderName": "Rishabh Gupta",
+    "collegeName": "Abes Engineering College"
+  },
+  {
+    "teamName": "Laal Tamatar",
+    "leaderName": "Laal Tamatar",
+    "collegeName": "Jaypee Institute Of Information Technology"
+  },
+  {
+    "teamName": "Krishi Drishti",
+    "leaderName": "Utkarsh Tripathi",
+    "collegeName": "Dronacharya Group of Institutions (DGI) Greater Noida"
+  }
 ]

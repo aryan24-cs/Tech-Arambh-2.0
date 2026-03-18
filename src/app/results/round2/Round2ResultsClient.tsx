@@ -7,7 +7,6 @@ import { Trophy, Terminal, Search, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 interface Round2Result {
-  rank: number;
   teamName: string;
   leaderName: string;
   collegeName?: string;
